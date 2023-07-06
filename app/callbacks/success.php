@@ -26,7 +26,12 @@
 
     <div class="bottomHalf">
 
-      <p>Enhorabuena!, tu pago fue exitoso...    <br> Payment Type: <?php echo $_GET['payment_type'] ?> <br>  Payment ID: <?php echo $_GET['payment_id'] ?> <br> External reference: <?php echo $_GET['external_reference'] ?>  </p>
+      <p>Enhorabuena!, tu pago fue exitoso...
+          <br>
+          Payment metthod :<?php echo $_GET['payment_method_id'] ?> <br> 
+         Payment Type: <?php echo $_GET['payment_type'] ?> <br>
+          Payment ID: <?php echo $_GET['payment_id'] ?> <br>
+          External reference: <?php echo $_GET['external_reference'] ?>  </p>
 
 
 
@@ -57,7 +62,7 @@ font-family: 'Khand', sans-serif;
 
 .wrapperAlert {
 width: 500px;
-height: 400px;
+height: 650px;
 overflow: hidden;
 border-radius: 12px;
 border: thin solid #ddd;
