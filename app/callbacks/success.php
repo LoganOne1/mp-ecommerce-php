@@ -26,14 +26,9 @@
 
     <div class="bottomHalf">
 
-      <p>Enhorabuena!, tu pago fue exitoso...</p>
-
-        <p>Payment Type: <?php echo $_GET['payment_type'] ?></p>
-
-         <p> Payment ID: <?php echo $_GET['payment_id'] ?></p>
+      <p>Enhorabuena!, tu pago fue exitoso...    <br> Payment Type: <?php echo $_GET['payment_type'] ?> <br>  Payment ID: <?php echo $_GET['payment_id'] ?> <br> External reference: <?php echo $_GET['external_reference'] ?>  </p>
 
 
-       <p> External reference: <?php echo $_GET['external_reference'] ?> </p>
 
       <button id="alertMO">Entiendo</button>
 
