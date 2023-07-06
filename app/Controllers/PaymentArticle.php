@@ -47,13 +47,13 @@ try {
   "installments" => 6
 );
 
-  $preference->notification_url = "https://mp-ecommerce-php.serverbeer/webhook.php";
+  $preference->notification_url = "https://brandonsa-mp-commerce-php-b8713d8c3711.herokuapp.com//webhook.php";
   $preference->external_reference = 'bsan5293@gmail.com';
     $preference->auto_return = "all";
     $preference->back_urls = array(
-    "success" =>"https://mp-ecommerce-php.serverbeer/app/callbacks/success.php",
-    "failure" => "https://mp-ecommerce-php.serverbeer//app/callbacks/failure.php",
-    "pending" =>  "https://mp-ecommerce-php.serverbeer//app/callbacks/pending.php"
+    "success" =>"https://brandonsa-mp-commerce-php-b8713d8c3711.herokuapp.com/app/callbacks/success.php",
+    "failure" => "https://brandonsa-mp-commerce-php-b8713d8c3711.herokuapp.com/app/callbacks/failure.php",
+    "pending" =>  "https://brandonsa-mp-commerce-php-b8713d8c3711.herokuapp.com/app/callbacks/pending.php"
 );
 
   $preference->save();

@@ -17,8 +17,13 @@
       case "invoice":
           $plan = MercadoPago\Invoice::find_by_id($_POST["data"]["id"]);
           break;
+          case"test":
+              $test = MercadoPago\Test::find_by_id($_POST["data"]["id"]);
+              break;
+
       case "point_integration_wh":
           // $_POST contiene la informaciòn relacionada a la notificaciòn.
           break;
   }
+
 ?>
