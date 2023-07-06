@@ -12,6 +12,9 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
 
+      <script src="https://www.mercadopago.com/v2/security.js" view="index"></script>
+
+
     <link rel="stylesheet" href="./assets/category-landing.css" media="screen, print">
 
     <link rel="stylesheet" href="./assets/category.css" media="screen, print">
@@ -259,7 +262,7 @@
                                         </div>
                                         <form action="/detail.php" method="post">
                                             <input type="hidden" name="img" value="./assets/samsung-galaxy-s9-xxl.jpg">
-                                            <input type="hidden" name="title" value="Samsung Galaxy S9">
+                                            <input  name="title" value="Samsung Galaxy S9">
                                             <input type="hidden" name="price" value="15000">
                                             <input type="hidden" name="unit" value="1">
                                             <button type="submit" class="mercadopago-button" formmethod="post">Comprar ahora</button>

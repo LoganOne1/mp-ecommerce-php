@@ -4,7 +4,9 @@ try {
   require __DIR__ .  '/../../vendor/autoload.php';
 
   // Agrega credenciales
-  MercadoPago\SDK::setAccessToken('APP_USR-2926550097213535-092911-5eded40868803c83f12e9eef1afa99fa-1160956296');
+  MercadoPago\SDK::setAccessToken('TEST-6996837324494455-070413-1940117e2745318954948f9c169e1732-385094705');
+  //MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
+
   $image_src = substr($_POST['img'], 1);
   $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
   $hostPathImage = $protocol . $_SERVER['HTTP_HOST'].$image_src;
@@ -35,7 +37,7 @@ try {
   $item->quantity = 1;
   $item->unit_price = 56.00;
   $preference->items = array($item);
-  $preference->payer = $payer;
+  //$preference->payer = $payer;
 
   //payment methods }
   $preference->payment_methods = array(
@@ -45,12 +47,13 @@ try {
   "installments" => 6
 );
   $preference->external_reference = 'bsan5293@gmail.com';
-  $preference->auto_return = "approved";
+    $preference->auto_return = "all";
     $preference->back_urls = array(
-    "success" => $_SERVER['HTTP_HOST'] . "/app/callback/success.php",
-    "failure" => $_SERVER['HTTP_HOST'] . "/app/callback/failure.php",
-    "pending" => $_SERVER['HTTP_HOST'] . "/app/callback/pending.php"
+    "success" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/success.php",
+    "failure" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/failure.php",
+    "pending" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/pending.php"
 );
+
   $preference->save();
 
 

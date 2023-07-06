@@ -8,7 +8,7 @@
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="format-detection" content="telephone=no">
-
+    <script src="https://www.mercadopago.com/v2/security.js" view="detail" output="deviceId"></script>
   <script
   src="https://code.jquery.com/jquery-3.4.1.min.js"
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
@@ -20,6 +20,7 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
   <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
   <link rel="stylesheet" href="./assets/fonts" media="">
   <style>
   .as-filter-button-text {
@@ -120,7 +121,7 @@
                       <div class="as-producttile-title">
                         <h3 class="as-producttile-name">
                           <p class="as-producttile-tilelink">
-                            <span data-ase-truncate="2"><?php echo $_POST['title'] ?></span>
+                            <span data-ase-truncate="2">Articulo: <?php echo $_POST['title'] ?></span>
                           </p>
 
                         </h3>
@@ -132,12 +133,16 @@
                         <?php echo "$" . $_POST['unit'] ?>
                       </h3>
                     </div>
-                    <a href="<?php echo $preference->init_point; ?>" target="display-frame" >
+                      <a href="<?php echo $preference->init_point; ?>" target="display-frame" >
                       <button class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Pagar la compra
                       </button>
                     </a>
 
+
+                    <!-- <div class="checkout-mp">
+
+                      </div> -->
 
 
 
@@ -178,14 +183,23 @@
     </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div class="mp-mercadopago-checkout-wrapper" style="z-index:-2147483647;display:block;background:rgba(0, 0, 0, 0.7);border:0;overflow:hidden;visibility:hidden;margin:0;padding:0;position:fixed;left:0;top:0;width:0;opacity:0;height:0;transition:opacity 220ms ease-in;"> <svg class="mp-spinner" viewBox="25 25 50 50"> <circle class="mp-spinner-path" cx="50" cy="50" r="20" fill="none" stroke-miterlimit="10"></circle> </svg> </div><div id="ac-gn-viewport-emitter"> </div></body></html>
 
     <script type="text/javascript">
+    //var id_preference = '<?php echo $preference->id; ?>';
+    //console.log("ID Prefrence: "+id_preference);
+    //const mp = new MercadoPago('TEST-21338fc8-b634-4557-afdc-17f59464edb8');
+    //const bricksBuilder = mp.bricks();
 
-    const mp = new MercadoPago('APP_USR-a68157fb-5513-4dc7-adbf-709ba3e46766');
-    const bricksBuilder = mp.bricks();
+  //  mp.checkout({
+          //         preference: {
+                       id: id_preference
+                //   },
+                  // render: {
+                  //     container: '.checkout-mp',
+                    //   label: 'Pagar la compra',
+                //   }
+              //   });
 
 
-
-
-
+                 console.log(window.deviceId);
 
   </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
