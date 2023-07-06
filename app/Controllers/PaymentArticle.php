@@ -46,12 +46,14 @@ try {
   ),
   "installments" => 6
 );
+
+  $preference->notification_url = "https://mp-ecommerce-php.serverbeer/webhook.php";
   $preference->external_reference = 'bsan5293@gmail.com';
     $preference->auto_return = "all";
     $preference->back_urls = array(
-    "success" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/success.php",
-    "failure" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/failure.php",
-    "pending" => $protocol. $_SERVER['HTTP_HOST'] . "/app/callbacks/pending.php"
+    "success" =>"https://mp-ecommerce-php.serverbeer/app/callbacks/success.php",
+    "failure" => "https://mp-ecommerce-php.serverbeer//app/callbacks/failure.php",
+    "pending" =>  "https://mp-ecommerce-php.serverbeer//app/callbacks/pending.php"
 );
 
   $preference->save();
