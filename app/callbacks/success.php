@@ -192,7 +192,7 @@ animation-delay: 11s;
 
 .bottomHalf {
 align-items: center;
-padding: 35px;
+padding: 60px;
 }
 .bottomHalf p {
 font-weight: 500;
