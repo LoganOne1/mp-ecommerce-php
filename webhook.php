@@ -9,7 +9,7 @@
           $payment = MercadoPago\Payment::find_by_id($_POST["data"]["id"]);
           $json = file_get_contents("php://input");
           $data = json_decode($json, true);
-
+           file_put_contents("payment.json", $json);
           if ($data) {
               // Imprimir el contenido del JSON en la página
               echo '<pre>';
