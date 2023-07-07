@@ -4,7 +4,7 @@ try {
   require __DIR__ .  '/../../vendor/autoload.php';
 
   // Agrega credenciales
-  MercadoPago\SDK::setAccessToken('TEST-6996837324494455-070413-1940117e2745318954948f9c169e1732-385094705');
+  MercadoPago\SDK::setAccessToken('APP_USR-a68157fb-5513-4dc7-adbf-709ba3e46766');
   //MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
   $image_src = substr($_POST['img'], 1);
