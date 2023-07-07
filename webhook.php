@@ -7,6 +7,7 @@
   switch($_POST["type"]) {
       case "payment":
           $payment = MercadoPago\Payment::find_by_id($_POST["data"]["id"]);
+          echo $payment;
           break;
       case "plan":
           $plan = MercadoPago\Plan::find_by_id($_POST["data"]["id"]);
@@ -19,6 +20,7 @@
           break;
           case"test":
               $test = MercadoPago\Test::find_by_id($_POST["data"]["id"]);
+              echo $test;
               break;
 
       case "point_integration_wh":
