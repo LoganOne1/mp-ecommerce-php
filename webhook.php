@@ -10,6 +10,8 @@
           $json = file_get_contents("php://input");
           $data = json_decode($json, true);
            file_put_contents("payment.json", $json);
+
+           http_response_code(200);
           if ($data) {
               // Imprimir el contenido del JSON en la página
               echo '<pre>';
