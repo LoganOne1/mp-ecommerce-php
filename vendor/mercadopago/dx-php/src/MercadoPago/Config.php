@@ -108,19 +108,19 @@ class Config
     {
         parent::set($key, $value);
 
-        if ($key == "ACCESS_TOKEN") { 
+        if ($key == "ACCESS_TOKEN") {
             $user = $this->getUserId($value);
             parent::set('USER_ID', $user['id']);
             parent::set('COUNTRY_ID', $user['country_id']);
         }
-        
+
         if (parent::get('CLIENT_ID') != "" && parent::get('CLIENT_SECRET') != "" && empty(parent::get('ACCESS_TOKEN'))) {
-            
+
             $response = $this->getToken();
 
             if (isset($response['access_token'])) {
                 parent::set('ACCESS_TOKEN', $response['access_token']);
-            
+
 
                 $user = $this->getUserId($response['access_token']);
 
@@ -129,12 +129,12 @@ class Config
                 }
 
             }
-            
+
         }
     }
 
 
-    /** 
+    /**
      * @return mixed
      */
     public function getUserId()

@@ -4,8 +4,8 @@ try {
   require __DIR__ .  '/../../vendor/autoload.php';
 
   // Agrega credenciales
-  MercadoPago\SDK::setAccessToken('APP_USR-a68157fb-5513-4dc7-adbf-709ba3e46766');
-  //MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
+  MercadoPago\SDK::setAccessToken('TEST-2926550097213535-092911-9f95049df86420b3055add7ae6e0e56e-1160956296');
+  MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 
   $image_src = substr($_POST['img'], 1);
   $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https://' : 'http://';
@@ -37,7 +37,7 @@ try {
   $item->quantity = 1;
   $item->unit_price = 56.00;
   $preference->items = array($item);
-  //$preference->payer = $payer;
+  $preference->payer = $payer;
 
   //payment methods }
   $preference->payment_methods = array(
@@ -65,7 +65,7 @@ try {
 
 } catch (Exception $e) {
   // Captura cualquier excepción ocurrida dentro del bloque try
-
+  $error_log ='Error: ' . $e->getMessage();
   // Maneja la excepción según tus necesidades, puedes mostrar un mensaje de error o registrar el error en un archivo de registro, por ejemplo.
   echo 'Error: ' . $e->getMessage();
 }

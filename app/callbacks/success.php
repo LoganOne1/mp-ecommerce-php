@@ -1,5 +1,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+<script src="https://www.mercadopago.com/v2/security.js" view="success_payment_page"></script>
 
 <div class="wrapperAlert">
 
@@ -28,7 +29,7 @@
 
       <p>Enhorabuena!, tu pago fue exitoso...
           <br>
-          Payment metthod :<?php echo $_GET['payment_method_id'] ?> <br> 
+          Payment metthod :<?php echo $_GET['payment_method_id'] ?> <br>
          Payment Type: <?php echo $_GET['payment_type'] ?> <br>
           Payment ID: <?php echo $_GET['payment_id'] ?> <br>
           External reference: <?php echo $_GET['external_reference'] ?>  </p>

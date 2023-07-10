@@ -18,9 +18,8 @@
   <link rel="stylesheet" href="./assets/category.css" media="screen, print">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/merch-tools.css" media="screen, print">
-  <script src="https://sdk.mercadopago.com/js/v2"></script>
-    <script src="https://www.mercadopago.com/v2/security.js" view="item"></script>
-  <link rel="stylesheet" href="./assets/fonts" media="">
+
+    <link rel="stylesheet" href="./assets/fonts" media="">
   <style>
   .as-filter-button-text {
     font-size: 26px;
@@ -187,9 +186,12 @@
     //const mp = new MercadoPago('TEST-21338fc8-b634-4557-afdc-17f59464edb8');
     //const bricksBuilder = mp.bricks();
 
+
+
+
   //  mp.checkout({
           //         preference: {
-                       id: id_preference
+                       //id: id_preference
                 //   },
                   // render: {
                   //     container: '.checkout-mp',
@@ -198,7 +200,7 @@
               //   });
 
 
-                 console.log(window.deviceId);
+                // console.log(window.deviceId);
 
   </script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
